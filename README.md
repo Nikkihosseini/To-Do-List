@@ -1,7 +1,7 @@
 # To Do List App
 
 ## Quick access:
-https://nikkihosseini.github.io/ToDoList-Project/
+[https://nikkihosseini.github.io/ToDoList-Project/](https://nikkihosseini.github.io/To-Do-List/)
 
 
 
