@@ -1,0 +1,114 @@
+@import "font.css";
+
+
+/* 
+
+! Variables
+
+*/
+
+:root{
+    --light-blue: #00a9f7;
+    --bright-aqua: #38fff2;
+    --main-bg: rgba(255, 255, 255, 0.3);
+    --dark-blue: #023047;
+    --yellow: #ffb703;
+    --orange: #fb8501;
+ }
+ 
+
+/* 
+
+! Reset
+
+*/
+
+html{
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+*,
+::after,
+::before{
+    box-sizing: inherit;
+    font-size: inherit;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+input{
+    outline: none;
+    color: inherit;
+}
+
+button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+body{
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(var(--bright-aqua),var(--light-blue));
+    min-height: 100vh;
+        backdrop-filter: blur(10px);
+}
+
+
+
+/* 
+
+* App Css
+
+*/
+
+/* ? MAin */
+
+.main{
+    background-color: var(--main-bg);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    text-align: center;
+    border-radius: 2rem;
+    padding: 2rem;
+    width: 40rem;
+    height: 60rem;
+}
+
+
+
+
+/* 
+
+! Copyright
+
+*/
+
+.copyright__weapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    font-weight: 700;
+}
+.copyright{
+    font-size: 1.3rem;
+}
+.github__link{
+    
+}
+
+
+
