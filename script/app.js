@@ -37,6 +37,11 @@ function saveTaskToLocalStorage(){
 function addTastToHtml(){
    
     let toDoListList = $.querySelector('.toDoList_list')
+    if(taskList.length !== 0){
+        toDoListList.style.marginTop = '1rem'
+    }else{
+         toDoListList.style.marginTop = '0'
+    }
     toDoListList.innerHTML = ''
 
     taskList.forEach((task ,index) => {
@@ -66,9 +71,13 @@ function toggleClassCheched(index){
 function deleteTask(index){
     taskList = taskList.filter((task , newIndex) => {return newIndex != index})
 
+    console.lo
+
     addTastToHtml()
     saveTaskToLocalStorage()
 }
+
+
 
 
 
