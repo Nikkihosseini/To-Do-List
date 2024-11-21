@@ -1,7 +1,7 @@
 # To Do List App
 
 ## Quick access:
-https://nikkihosseini.github.io/Calculator-Deployment/
+https://nikkihosseini.github.io/ToDoList-Project/
 
 
 
