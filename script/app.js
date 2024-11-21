@@ -18,6 +18,7 @@ toDoListBtn.addEventListener('click', (event) =>{
     if(toDoListText.value != ''){
         taskList.unshift({
             content :  toDoListText.value,
+            status : 'doing'
         })
     }
 
@@ -41,8 +42,9 @@ function addTastToHtml(){
     taskList.forEach((task ,index) => {
         let liElem = $.createElement('li')
         liElem.classList.add('toDoList_item')
+        liElem.classList.add(task.status)
         liElem.innerHTML = `
-            <i class="fa-regular fa-square-check fa-xl check-svg"></i>
+            <i onclick='toggleClassCheched(${index})' class="fa-regular fa-square-check fa-xl check-svg"></i>
             <p class="toDoList_task">${task.content}</p>
             <i onclick='deleteTask(${index})' class="fa-solid fa-xmark fa-xl delete-svg"></i>
             `
@@ -51,6 +53,15 @@ function addTastToHtml(){
    
 }
 addTastToHtml()
+
+function toggleClassCheched(index){
+
+    taskList[index].status = 'checked'
+
+
+    addTastToHtml()
+    saveTaskToLocalStorage()
+}
 
 function deleteTask(index){
     taskList = taskList.filter((task , newIndex) => {return newIndex != index})
