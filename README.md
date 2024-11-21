@@ -10,4 +10,4 @@ A responsive To Do List App with HTML, CSS and Vanilla JS.
 
 ---
 ### snapshot:
-<a href="https://ibb.co/fYkhWjp"><img src="https://i.ibb.co/6RH3SjP/Screenshot-18.png" alt="Screenshot-18" border="0"></a>
+<a href="https://ibb.co/xskPvfy"><img src="https://i.ibb.co/hM6h5Zk/Screenshot-20.png" alt="Screenshot-20" border="0"></a>
