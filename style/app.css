@@ -148,15 +148,23 @@ body{
     padding: 1rem;
     position: relative;
     min-height: 5rem;
-}
-.toDoList_task{
-    position: absolute;
-    left: 32px;
     font-size: 1.5rem;
     font-weight: 600;
 }
+.toDoList_task{
+    width: 100%;
+    text-align: left;
+}
+
+.check-svg{
+    margin-right: 1.8rem;
+}
+.delete-svg{
+    margin-left: 1.8rem;
+}
+
 .check-svg,
-.close-svg{
+.delete-svg{
     cursor: pointer;
 }
 
