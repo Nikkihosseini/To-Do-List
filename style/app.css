@@ -47,6 +47,7 @@ ul{
 }
 
 textarea{
+    font-family: "Kumbh Sans", sans-serif;
     outline: none;
     color: inherit;
     border: none;
@@ -116,7 +117,8 @@ body{
     height: 6rem;
     padding: 0.5rem;
     font-size: 1.5rem;
-    scrollbar-width: none;  
+    scrollbar-width: none; 
+    font-weight: 600; 
 }
 .toDoList_btn{
     position: absolute;
