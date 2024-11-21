@@ -3,6 +3,8 @@ const toDoListBtn = $.querySelector('.toDoList_btn')
 
 let taskList = [];
 
+
+
 if(localStorage.getItem('taskList') != null){
     taskList = JSON.parse(localStorage.getItem('taskList'))
 }
@@ -13,10 +15,9 @@ toDoListBtn.addEventListener('click', (event) =>{
 
     let toDoListText = $.getElementById('toDoList_text')
      
-    if(toDoListText != ''){
+    if(toDoListText.value != ''){
         taskList.unshift({
             content :  toDoListText.value,
-            status : 'doing'
         })
     }
 
@@ -43,13 +44,20 @@ function addTastToHtml(){
         liElem.innerHTML = `
             <i class="fa-regular fa-square-check fa-xl check-svg"></i>
             <p class="toDoList_task">${task.content}</p>
-            <i class="fa-solid fa-xmark fa-xl close-svg"></i>
+            <i onclick='deleteTask(${index})' class="fa-solid fa-xmark fa-xl delete-svg"></i>
             `
             toDoListList.append(liElem)
     })
    
-
-  
 }
 addTastToHtml()
+
+function deleteTask(index){
+    taskList = taskList.filter((task , newIndex) => {return newIndex != index})
+
+    addTastToHtml()
+    saveTaskToLocalStorage()
+}
+
+
 
