@@ -11,8 +11,9 @@
     --light-blue: #00a9f7;
     --bright-aqua: #38fff2;
     --main-bg: rgba(255, 255, 255, 0.3);
+    --main-app: rgba(255, 255, 255, 0.6);
     --dark-blue: #023047;
-    --yellow: #ffb703;
+    --light-green: #58ff68;
     --orange: #fb8501;
  }
  
@@ -41,10 +42,15 @@ a{
     color: inherit;
 }
 
-input{
+ul{
+   padding: 0;
+}
+
+textarea{
     outline: none;
     color: inherit;
     border: none;
+    resize:none
 }
 
 button{
@@ -85,14 +91,70 @@ body{
     background-color: var(--main-bg);
     backdrop-filter: blur(20px);
     border: 2px solid rgba(255, 255, 255, 0.9);
-    text-align: center;
     border-radius: 2rem;
     padding: 2rem;
     width: 40rem;
-    height: 60rem;
+}
+
+.form{
+    background-color: var(--main-app);
+    position: relative;
+    min-height: 10rem;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.toDoList_title{
+    font-size: 2rem;
+}
+#toDoList_text{
+    background-color: transparent;
+    display: block;
+    width: 25rem;
+    height: 6rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    scrollbar-width: none;  
+}
+.toDoList_btn{
+    position: absolute;
+    background-color: var(--dark-blue);
+    color: #fefefe;
+    border-radius: 1rem;
+    display: block;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    right: 10px;
+    bottom: 10px;
+}
+.toDoList_list{
+    margin-top: 1rem;
+}
+.toDoList_item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-app);
+    position: relative;
+    border-radius: 1rem;
+    padding: 1rem;
+    position: relative;
+    min-height: 5rem;
+}
+.toDoList_task{
+    position: absolute;
+    left: 32px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.check-svg,
+.close-svg{
+    cursor: pointer;
 }
 
 
+.checked{
+    background-color: var(--light-green);
+}
 
 
 /* 
