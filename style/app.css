@@ -94,7 +94,10 @@ body{
     border-radius: 2rem;
     padding: 2rem;
     width: 40rem;
+    max-height: 50rem;
 }
+
+
 
 .form{
     background-color: var(--main-app);
@@ -128,6 +131,12 @@ body{
 }
 .toDoList_list{
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 35rem;
+    overflow-y: scroll;
+    scrollbar-width: none;  
 }
 .toDoList_item{
     display: flex;
