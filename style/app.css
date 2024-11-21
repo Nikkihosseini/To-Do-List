@@ -93,9 +93,8 @@ body{
     backdrop-filter: blur(20px);
     border: 2px solid rgba(255, 255, 255, 0.9);
     border-radius: 2rem;
-    padding: 2rem;
-    width: 40rem;
-    max-height: 50rem;
+    padding: 1rem;
+    width: 30rem;
 }
 
 
@@ -109,11 +108,12 @@ body{
 }
 .toDoList_title{
     font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 #toDoList_text{
     background-color: transparent;
     display: block;
-    width: 25rem;
+    width: 19rem;
     height: 6rem;
     padding: 0.5rem;
     font-size: 1.5rem;
@@ -126,7 +126,7 @@ body{
     color: #fefefe;
     border-radius: 1rem;
     display: block;
-    padding: 1.5rem;
+    padding: 1rem;
     font-size: 1.5rem;
     right: 10px;
     bottom: 10px;
@@ -142,38 +142,66 @@ body{
 }
 .toDoList_item{
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     background-color: var(--main-app);
-    position: relative;
     border-radius: 1rem;
     padding: 1rem;
     position: relative;
-    min-height: 5rem;
     font-size: 1.5rem;
     font-weight: 600;
 }
 .toDoList_task{
-    width: 100%;
+    width: 28rem;
     text-align: left;
+    margin: 0 1.5rem;
 }
 
 .check-svg{
-    margin-right: 1.8rem;
+
 }
 .delete-svg{
-    margin-left: 1.8rem;
+ 
 }
 
 .check-svg,
 .delete-svg{
     cursor: pointer;
+    margin-top: 1rem;
 }
 
 
 .checked{
     background-color: var(--light-green);
 }
+
+
+/* 
+
+! Responsive
+
+*/
+
+
+
+@media (min-width: 768px){
+   .main{
+    padding: 2rem;
+    width: 40rem;
+   }
+   
+   #toDoList_text{
+    width: 26rem;
+   }
+
+
+   .toDoList_btn{
+    padding: 1.5rem;
+}
+}
+
+
+
 
 
 /* 
