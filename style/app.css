@@ -151,9 +151,10 @@ body{
     font-weight: 600;
 }
 .toDoList_task{
-    width: 28rem;
+    width: 19rem;
     text-align: left;
     margin: 0 1.5rem;
+    word-break: break-all;
 }
 
 .check-svg{
@@ -173,32 +174,6 @@ body{
 .checked{
     background-color: var(--light-green);
 }
-
-
-/* 
-
-! Responsive
-
-*/
-
-
-
-@media (min-width: 768px){
-   .main{
-    padding: 2rem;
-    width: 40rem;
-   }
-   
-   #toDoList_text{
-    width: 26rem;
-   }
-
-
-   .toDoList_btn{
-    padding: 1.5rem;
-}
-}
-
 
 
 
@@ -225,3 +200,33 @@ body{
 
 
 
+
+/* 
+
+! Responsive
+
+*/
+
+
+
+@media screen and (min-width: 768px){
+    .main{
+     padding: 2rem;
+     width: 40rem;
+    }
+    
+    #toDoList_text{
+     width: 26rem;
+    }
+ 
+    .toDoList_task{
+        width: 28rem;
+    }
+ 
+    .toDoList_btn{
+     padding: 1.5rem;
+ }
+}
+ 
+ 
+ 
