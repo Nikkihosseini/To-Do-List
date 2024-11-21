@@ -44,6 +44,7 @@ a{
 input{
     outline: none;
     color: inherit;
+    border: none;
 }
 
 button{
@@ -51,6 +52,9 @@ button{
     outline: none;
     background-color: transparent;
     cursor: pointer;
+}
+ul{
+    list-style-type: none;
 }
 
 
@@ -63,7 +67,8 @@ body{
     flex-direction: column;
     background-image: linear-gradient(var(--bright-aqua),var(--light-blue));
     min-height: 100vh;
-        backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: var(--dark-blue);
 }
 
 
