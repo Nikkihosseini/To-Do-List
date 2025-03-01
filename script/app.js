@@ -61,7 +61,11 @@ addTastToHtml()
 
 function toggleClassCheched(index){
 
-    taskList[index].status = !taskList[index].status
+  let toDoListTask = $.querySelector('.toDoList_task')
+
+  taskList[index].status = !taskList[index].status
+
+  taskList[index].status ? toDoListTask.classList.add('checked') : toDoListTask.classList.remove('checked')
 
 
     addTastToHtml()
