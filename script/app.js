@@ -18,7 +18,7 @@ toDoListBtn.addEventListener('click', (event) =>{
     if(toDoListText.value != ''){
         taskList.unshift({
             content :  toDoListText.value,
-            status : 'doing'
+            status : false
         })
     }
 
@@ -61,7 +61,7 @@ addTastToHtml()
 
 function toggleClassCheched(index){
 
-    taskList[index].status = 'checked'
+    taskList[index].status = !taskList[index].status
 
 
     addTastToHtml()
