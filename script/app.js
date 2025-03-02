@@ -5,6 +5,8 @@ let taskList = [];
 
 
 
+
+
 if(localStorage.getItem('taskList') != null){
     taskList = JSON.parse(localStorage.getItem('taskList'))
 }
@@ -18,13 +20,13 @@ toDoListBtn.addEventListener('click', (event) =>{
     if(toDoListText.value != ''){
         taskList.unshift({
             content :  toDoListText.value,
-            status : 'doing'
+            status : false
         })
     }
 
     toDoListText.value = '';
 
-    addTastToHtml()
+    addTaskToHtml()
 
     saveTaskToLocalStorage()
 
@@ -34,7 +36,7 @@ function saveTaskToLocalStorage(){
     localStorage.setItem('taskList' , JSON.stringify(taskList))
 }
 
-function addTastToHtml(){
+function addTaskToHtml(){
    
     let toDoListList = $.querySelector('.toDoList_list')
     if(taskList.length !== 0){
@@ -44,36 +46,35 @@ function addTastToHtml(){
     }
     toDoListList.innerHTML = ''
 
-    taskList.forEach((task ,index) => {
+    taskList.forEach((task, inedex) => {
         let liElem = $.createElement('li')
         liElem.classList.add('toDoList_item')
-        liElem.classList.add(task.status)
         liElem.innerHTML = `
-            <i onclick='toggleClassCheched(${index})' class="fa-regular fa-square-check fa-xl check-svg"></i>
-            <p class="toDoList_task">${task.content}</p>
-            <i onclick='deleteTask(${index})' class="fa-solid fa-xmark fa-xl delete-svg"></i>
+           <div class='item' style="background-color: ${taskList[inedex].status ?  '#58ff68' : 'rgba(255, 255, 255, 0.6)' }">
+                <i onclick='toggleStatus(${inedex})' class="fa-regular fa-square-check fa-xl check-svg"></i>
+                <p class="toDoList_task">${task.content}</p>
+                <i onclick='deleteTask(${inedex})' class="fa-solid fa-xmark fa-xl delete-svg"></i>
+           </div>
             `
             toDoListList.append(liElem)
     })
    
 }
-addTastToHtml()
+addTaskToHtml()
 
-function toggleClassCheched(index){
+function toggleStatus(inedex){
 
-    taskList[index].status = 'checked'
+    taskList[inedex].status = !taskList[inedex].status
 
-
-    addTastToHtml()
+    addTaskToHtml()
     saveTaskToLocalStorage()
 }
 
-function deleteTask(index){
-    taskList = taskList.filter((task , newIndex) => {return newIndex != index})
 
-    console.lo
-
-    addTastToHtml()
+function deleteTask(inedex){
+    taskList = taskList.filter((task , newInedex) => {return inedex != newInedex})
+ 
+    addTaskToHtml()
     saveTaskToLocalStorage()
 }
 

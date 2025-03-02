@@ -139,7 +139,8 @@ body{
     overflow-y: scroll;
     scrollbar-width: none;  
 }
-.toDoList_item{
+
+.item{
     display: flex;
     align-items: start;
     justify-content: space-between;
@@ -150,6 +151,7 @@ body{
     font-size: 1.5rem;
     font-weight: 600;
 }
+
 .toDoList_task{
     width: 19rem;
     text-align: left;
@@ -171,7 +173,7 @@ body{
 }
 
 
-.checked{
+.item.checked{
     background-color: var(--light-green);
 }
 
